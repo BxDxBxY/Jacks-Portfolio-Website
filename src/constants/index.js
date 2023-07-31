@@ -17,12 +17,18 @@ import {
   docker,
   meta,
   starbucks,
-  tesla,
+  upwork,
   shopify,
   carrent,
   jobit,
+  metaversus,
   tripguide,
   threejs,
+  photoshop,
+  nurillosuyunboyev,
+  najot,
+  nodirbek,
+  arslonbek,
 } from "../assets";
 
 export const navLinks = [
@@ -50,11 +56,11 @@ const services = [
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Hard Worker",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Graphic Designer",
     icon: creator,
   },
 ];
@@ -80,10 +86,10 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
+  // {
+  //   name: "Redux Toolkit",
+  //   icon: redux,
+  // },
   {
     name: "Tailwind CSS",
     icon: tailwind,
@@ -92,9 +98,13 @@ const technologies = [
     name: "Node JS",
     icon: nodejs,
   },
+  // {
+  //   name: "MongoDB",
+  //   icon: mongodb,
+  // },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Photoshop",
+    icon: photoshop,
   },
   {
     name: "Three JS",
@@ -108,17 +118,17 @@ const technologies = [
     name: "figma",
     icon: figma,
   },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  // {
+  //   name: "docker",
+  //   icon: docker,
+  // },
 ];
 
 const experiences = [
   {
     title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    company_name: "Najot Talim",
+    icon: najot,
     iconBg: "#383E56",
     date: "March 2020 - April 2021",
     points: [
@@ -130,8 +140,8 @@ const experiences = [
   },
   {
     title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    company_name: "Upwork",
+    icon: upwork,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
@@ -176,7 +186,7 @@ const testimonials = [
     name: "ArslonBek Ro'ziboyev",
     designation: "CFO",
     company: "Genesis Innovation, LLC",
-    image: "https://media.licdn.com/dms/image/C4E03AQHF4jn4HazTvA/profile-displayphoto-shrink_800_800/0/1645507916342?e=1684972800&v=beta&t=oM8mRuPRnpQqfKF13F7qNePICWvYwcTchIqzp-gdTTs",
+    image: arslonbek,
   },
   {
     testimonial:
@@ -184,44 +194,52 @@ const testimonials = [
     name: "Nurillo Suyunboyev",
     designation: "COO",
     company: "Cashbox",
-    image: "https://media.licdn.com/dms/image/D4D03AQFBaN3NEyykaw/profile-displayphoto-shrink_400_400/0/1679497586231?e=1684972800&v=beta&t=4nvYCmdSEVEgIIry0LSy7libs4WO54Wf5aQJc6Otm4c",
+    image: nurillosuyunboyev,
   },
   {
     testimonial:
-      "After Abdukaxxor optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
+    "After Abdukaxxor optimized our website, our traffic increased by 50%. We can't thank him enough!",
+    name: "Nodirbek Qobilov",
     designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    company: "Najot Talim",
+    image: nodirbek,
   },
+  // {
+  //   testimonial:
+  //   "Our Abdukaxxor transformed our codebase, improving performance, scalability, and reliability. Highly skilled and dependable!",
+  //   name: "Dostonbek",
+  //   designation: "PM",
+  //   company: "Najot Talim",
+  //   image: nodirbek,
+  // },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Scoot",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Web-based platform that allows users to search, book, and manage bike rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "tailwind",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "scss",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/BxDxBxY/Jacks-deluxe",
   },
   {
-    name: "Job IT",
+    name: "Metaversus",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web application that enables my clients to see my works and projects, view estimated salary ranges for positions, and locate available jobs based on their current location.",
     tags: [
       {
         name: "react",
@@ -232,24 +250,24 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "framer-motion",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: metaversus,
+    source_code_link: "https://github.com/BxDxBxY/metaversus",
   },
   {
-    name: "Trip Guide",
+    name: "Youtube clone",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "This Website is clone of an real YouTube app. YouTube is an American global online video sharing and social media platform headquartered in San Bruno, California, United States.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "mui",
         color: "green-text-gradient",
       },
       {
@@ -258,7 +276,7 @@ const projects = [
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/BxDxBxY/my-youtube",
   },
 ];
 

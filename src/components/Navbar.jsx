@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { close, logo, menu } from '../assets'
 import { navLinks } from '../constants'
 import { styles } from '../styles'
+import CV from "../Files/CV.pdf"
 
 
 const Navbar = () => {
@@ -25,12 +26,15 @@ const Navbar = () => {
         >
           <img src={logo} alt="logo" className='w-9 rounded-full h-9 object-contain' />
           <p className='text-white flex text-[18px] font-bold cursor-pointer'>
-          Jack &nbsp;
+          Abdukaxxor &nbsp;
           <span className='sm:block hidden'>| React Mastery</span></p>
         </Link>
         <ul
         className='list-none hidden sm:flex flex-row gap-10'
         >
+        <li>
+            <a className='md:p-3 p-3 bg-[#051b30] xs:p-1 active:bg-[#1989be] hover:bg-[#095698] duration-150 rounded-2xl lg:text-[24px] text-[12px] text-white cursor-pointer z-40' href={CV} download >Download CV</a>
+         </li>
           {navLinks.map((link)=>(
             <li 
             key={link.id}
@@ -52,6 +56,9 @@ const Navbar = () => {
              <ul
         className='list-none flex justify-end flex-col gap-4 items-start'
         >
+        <li>
+            <a className='md:p-3 p-3 bg-[#915eff] xs:p-1 active:bg-[#583999] hover:bg-[#7e52de] rounded-2xl lg:text-[24px] text-[12px] text-white cursor-pointer z-40' href={CV} download >Download CV</a>
+         </li>
           {navLinks.map((link)=>(
             <li 
             key={link.id}

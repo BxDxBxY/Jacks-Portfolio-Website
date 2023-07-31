@@ -20,20 +20,28 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import photoshop from "./tech/photoshop.png"
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import upwork from "./company/upwork.png";
+import najot from "./company/najot.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import tripguide from "./youtube.png";
+import carrent from "./scoot.png";
+import metaversus from "./metavers.png"
+import jobit from "./month4.png"
+
+import arslonbek from "./images/Arslonbek.jpg"
+import nodirbek from "./images/Nodirbek.jpg"
+import nurillosuyunboyev from './images/Nurillo.jpg'
 
 export {
   logo,
   backend,
   creator,
+  nodirbek,
   mobile,
   web,
   github,
@@ -52,11 +60,16 @@ export {
   tailwind,
   typescript,
   threejs,
+  photoshop,
   meta,
   shopify,
   starbucks,
-  tesla,
+  upwork,
+  najot,
   carrent,
   jobit,
   tripguide,
+  arslonbek,
+  metaversus,
+  nurillosuyunboyev
 };
