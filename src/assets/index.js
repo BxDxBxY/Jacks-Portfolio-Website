@@ -20,22 +20,29 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
-import photoshop from "./tech/photoshop.png"
+import photoshop from "./tech/photoshop.png";
+import link_image from "./link.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import upwork from "./company/upwork.png";
+import xoncafe from "./company/xoncafe.svg";
+import hocainc from "./company/hoca.jpg";
 import najot from "./company/najot.png";
 
 import tripguide from "./youtube.png";
 import carrent from "./scoot.png";
-import metaversus from "./metavers.png"
-import jobit from "./month4.png"
+import jobportal from "./jobportal_image.png";
+import xoncafe_website from "./xon-cafe.png";
+import metaversus from "./metavers.png";
+import jobit from "./month4.png";
 
-import arslonbek from "./images/Arslonbek.jpg"
-import nodirbek from "./images/Nodirbek.jpg"
-import nurillosuyunboyev from './images/Nurillo.jpg'
+import arslonbek from "./images/Arslonbek.jpg";
+import nodirbek from "./images/Nodirbek.jpg";
+import nurillosuyunboyev from "./images/Nurillo.jpg";
+import elmurodjon from "./images/Elmurodjon Abdullajonov.jpg";
+import xurshidbek from "./images/Xurshidbek Narov.jpg";
 
 export {
   logo,
@@ -57,6 +64,7 @@ export {
   nodejs,
   reactjs,
   redux,
+  link_image,
   tailwind,
   typescript,
   threejs,
@@ -71,5 +79,11 @@ export {
   tripguide,
   arslonbek,
   metaversus,
-  nurillosuyunboyev
+  nurillosuyunboyev,
+  xoncafe,
+  xoncafe_website,
+  hocainc,
+  elmurodjon,
+  xurshidbek,
+  jobportal,
 };

@@ -10,6 +10,9 @@ import LinkedIn from "../assets/images/LinkedIn.svg";
 import Github from "../assets/images/Github.svg";
 import Axios from "../utils/Axios";
 import { Alert, Snackbar } from "@mui/material";
+import axios from "axios";
+
+const my_formsubmit_email_encrypted = "e25ce29bb3d9a1cbc91e3967bcad8624";
 
 const Contact = () => {
   const formRef = useRef();
@@ -27,16 +30,30 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
   const handleSubmit = async (e) => {
+    const formData = new FormData(formRef.current);
     e.preventDefault();
-    if (!form.name) {setErrWord("Please provide a name!"); return setOpenError(true); };
-    if (!form.email) {setErrWord("Please provide an email!"); return setOpenError(true); };
-    if (!form.message){setErrWord("Hey! Say what you want to say!"); return setOpenError(true) };
+    if (!form.name) {
+      setErrWord("Please provide a name!");
+      return setOpenError(true);
+    }
+    if (!form.email) {
+      setErrWord("Please provide an email!");
+      return setOpenError(true);
+    }
+    if (!form.message) {
+      setErrWord("Hey! Say what you want to say!");
+      return setOpenError(true);
+    }
+
+    console.log(formData.values());
     if (form.email && form.message && form.name) {
-      console.log(form);
       setLoading(true);
-      await Axios.post("/sendemail", form)
+      await axios
+        .post(
+          "https://formsubmit.co/e25ce29bb3d9a1cbc91e3967bcad8624",
+          formData
+        )
         .then((res) => {
-          console.log(res);
           setLoading(false);
           setForm({
             name: "",
@@ -50,24 +67,48 @@ const Contact = () => {
           setErrWord(err.response.statusText);
           setOpenError(true);
           setLoading(false);
-        });
-
-      // async function postObject(url, object) {
-      //   try {
-      //     const response = await axios.post(url, object);
-      //     console.log("Object posted successfully!");
-      //     console.log("Response:", response.data);
-      //   } catch (error) {
-      //     console.error("Error posting object:", error.message);
-      //   }
-      // }
-
-      // const apiUrl = "http://localhost/sendemail";
-      // const objectToPost = form;
-
-      // postObject(apiUrl, objectToPost);
+        })
+        .finally(() => setLoading(false));
     }
-    else setLoading(false);
+
+    // updated at 01.02.2024 overall i got "formsubmit" that does backend job itself so we don't need the code below anymore except if I wish to change it sometime later (nodemailer)
+
+    // if (form.email && form.message && form.name) {
+    //   console.log(form);
+    //   setLoading(true);
+    //   await Axios.post("/sendemail", form)
+    //     .then((res) => {
+    //       console.log(res);
+    //       setLoading(false);
+    //       setForm({
+    //         name: "",
+    //         email: "",
+    //         message: "",
+    //       });
+    //       setOpenSuccess(true);
+    //     })
+    //     .catch((err) => {
+    //       console.log(err);
+    //       setErrWord(err.response.statusText);
+    //       setOpenError(true);
+    //       setLoading(false);
+    //     });
+
+    //   // async function postObject(url, object) {
+    //   //   try {
+    //   //     const response = await axios.post(url, object);
+    //   //     console.log("Object posted successfully!");
+    //   //     console.log("Response:", response.data);
+    //   //   } catch (error) {
+    //   //     console.error("Error posting object:", error.message);
+    //   //   }
+    //   // }
+
+    //   // const apiUrl = "http://localhost/sendemail";
+    //   // const objectToPost = form;
+
+    //   // postObject(apiUrl, objectToPost);
+    // } else setLoading(false);
     // sendEmail(form.name, form.email, form.message)
   };
   return (
@@ -109,8 +150,16 @@ const Contact = () => {
             <form
               ref={formRef}
               onSubmit={handleSubmit}
+              action="https://formsubmit.co/e25ce29bb3d9a1cbc91e3967bcad8624"
+              method="POST"
               className="mt-12 flex flex-col gap-8"
             >
+              {/* Honetpot */}
+              <input type="text" name="_honey" style={{ display: "none" }} />
+              {/* Disable Captcha */}
+              <input type="hidden" name="_captcha" value={false} />
+              {/* <input type="hidden" name="_next" value={""} /> */}
+
               <label className="flex flex-col">
                 <span className="text-white font-medium mb-4">Your Name</span>
                 <input
@@ -168,7 +217,7 @@ const Contact = () => {
           <p className={styles.sectionSubText}>Stay in touch</p>
           <p className={styles.sectionHeadText}>Just Say Hello!</p>
           <div className="py-16  w-full">
-            {/* <a href="mailto:sunatila6391@gmail.com" className="text-[20px] w-20 h-20 rounded-2xl bg-white text-tertiary font-bold tracking-wider p-8 cursor-pointer">Contact</a> */}
+            {/* <a href="mailto:mygmail@gmail.com" className="text-[20px] w-20 h-20 rounded-2xl bg-white text-tertiary font-bold tracking-wider p-8 cursor-pointer">Contact</a> */}
             {/* <p className="mt-20 text-[25px] font-bold ml-auto mr-auto mb-10 w-auto">Social Media</p> */}
             <div className="w-full flex justify-evenly items-center">
               <a
