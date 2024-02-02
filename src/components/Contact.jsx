@@ -50,7 +50,7 @@ const Contact = () => {
       setLoading(true);
       await axios
         .post(
-          "https://formsubmit.co/e25ce29bb3d9a1cbc91e3967bcad8624",
+          "https://formsubmit.co/sunatila6391@gmail.com",
           formData
         )
         .then((res) => {
@@ -65,6 +65,7 @@ const Contact = () => {
         .catch((err) => {
           console.log(err);
           setErrWord(err.response.statusText);
+          setErrWord(err.message);
           setOpenError(true);
           setLoading(false);
         })
