@@ -64,8 +64,8 @@ const Contact = () => {
         })
         .catch((err) => {
           console.log(err);
-          setErrWord(err.response.statusText);
-          setErrWord(err.message);
+          setErrWord(err?.response?.statusText);
+          setErrWord(err?.message);
           setOpenError(true);
           setLoading(false);
         })
